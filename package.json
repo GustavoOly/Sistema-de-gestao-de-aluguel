@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Aplicativo para gerenciar livros alugados",
   "main": "./out/main/index.js",
-  "author": "gustavooly",
+  "author": "Gustavo Oly",
   "homepage": "https://electron-vite.org",
   "scripts": {
     "format": "prettier --write .",
