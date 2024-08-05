@@ -24,6 +24,10 @@ function createWindow() {
     mainWindow.show();
   });
 
+  mainWindow.on('closed', () => {
+    app.quit(); 
+  });
+
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url);
     return { action: 'deny' };
@@ -100,7 +104,5 @@ app.whenReady().then(() => {
 });
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  app.quit();
 });
